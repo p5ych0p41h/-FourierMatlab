@@ -4,7 +4,7 @@ clear variables;
 
 a = 0.01;
 b = 0.15;
-t = [20:-0.05:-20.4];
+t = [-20.4:0.05:20];
 
 IM = a*exp(b*(-t(1:length(t)))).*sin((-t(1:length(t))));
 RE = a*exp(b*(-t(1:length(t)))).*cos((-t(1:length(t))));
@@ -37,4 +37,4 @@ text(0, maxY, maxZ,'\it Im\{z(t)\}', 'FontSize', 50, 'Fontname','Times New Roman
 text(0, minY, 0, '\it t', 'FontSize', 50, 'Fontname','Times New Roman', 'fontWeight', 'Bold');
 axis off;
 axis([minX maxX minY maxY minZ maxZ]);
-title('\it z(t) = ae^b^te^-^i^\omega^t', 'FontSize', 70, 'Fontname','Times New Roman', 'fontWeight', 'Bold');
+title(['\it z(t) = ae^b^te^-^i^\omega^t'], 'FontSize', 70, 'Fontname','Times New Roman', 'fontWeight', 'Bold');

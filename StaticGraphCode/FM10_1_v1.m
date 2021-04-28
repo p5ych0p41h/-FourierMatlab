@@ -4,7 +4,7 @@ clear variables;
 
 a = 0.01;
 b = 0.15;
-t = [20:-0.05:-20.4];
+t = [-20.4:0.05:20];
 
 e = a*exp(b*(t(1:length(t))));
 minX = min(t);

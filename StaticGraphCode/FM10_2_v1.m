@@ -4,7 +4,7 @@ clear variables;
 
 a = 0.01;
 b = 0.15;
-t = [20:-0.05:-20.4];
+t = [-20.4:0.05:20];
 
 RE = a*exp(b*(t(1:length(t)))).*cos((t(1:length(t))));
 minX = min(t);
@@ -22,4 +22,4 @@ text(maxX, 0,'\it t', 'FontSize', 50, 'Fontname','Times New Roman', 'fontWeight'
 text(0, maxY-0.005,'\it Re\{z(t)\}', 'FontSize', 50, 'Fontname','Times New Roman', 'fontWeight', 'Bold');
 axis off;
 axis([minX maxX minY maxY]);
-title('\it Re\{ae^b^te^-^i^\omega^t\}', 'FontSize', 70, 'Fontname','Times New Roman', 'fontWeight', 'Bold');
+title(['\it Re\{ae^b^te^-^i^\omega^t\}'], 'FontSize', 70, 'Fontname','Times New Roman', 'fontWeight', 'Bold');
